@@ -33,6 +33,11 @@ fi
 # Paths
 #
 
+# 
+# Java SDK verion
+# 
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
@@ -54,6 +59,7 @@ path=(
   $HOME/Library/Android/sdk/platform-tools
   $HOME/.cargo/bin
   $HOME/.local/bin
+  $JAVA_HOME/bin
   $ORACLE_HOME
   $path
 )
